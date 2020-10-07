@@ -99,6 +99,7 @@ main {
     flex-direction: column;
     overflow-y: scroll;
     border-radius: 1rem;
+    scrollbar-width: none;
 }
 
 .items-list::-webkit-scrollbar {
@@ -162,6 +163,10 @@ li p{
     font-size: 1.6rem;
     border-bottom: 1px solid rgba(0, 0, 0, .4);
     transition: all .2s;
+}
+
+.add-item:required {
+    box-shadow: none;
 }
 
 .add-item:hover {
