@@ -29,16 +29,16 @@ main {
     color: white;
 }
 
-.date-heading{
+.date-heading {
     color: white;
     display: inline-block;
 }
 
-.day{
+.day {
     font-size: 4rem;
 }
 
-.month{
+.month {
     font-weight: 400;
 }
 
@@ -80,7 +80,7 @@ main {
     margin-bottom: 2rem;
 }
 
-.idle{
+.idle {
     width: 75%;
     border-radius: 1rem;
 }
@@ -121,7 +121,7 @@ main {
     border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
-.task-complete{
+.task-complete {
     text-decoration: line-through;
 }
 
@@ -132,20 +132,19 @@ main {
     cursor: pointer;
 }
 
-.delete{
+.delete {
     align-self: center;
     color: rgba(0, 0, 0, .2);
     transition: all .5s;
 }
 
-.delete:hover{
+.delete:hover {
     color: red;
 }
 
-li p{
+li p {
     width: 80%;
 }
-
 
 .new-item {
     position: absolute;
@@ -220,23 +219,41 @@ li p{
     box-shadow: none;
 }
 
-span{
+span {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
 }
 
-span a:link, a:visited{
+span a:link, a:visited {
     text-decoration: none;
     color: #4a00e0;
 }
 
-span a:hover{
+span a:hover {
     color: gray;
 }
 
-@media (max-width: 600px) {
-    html{
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 56.25em) {
+    html {
         font-size: 50%;
+    }
+}
+
+@media (max-width: 21.875em) {
+    html {
+        font-size: 35%;
+    }
+}
+
+@media (min-width: 112.5em) {
+    html {
+        font-size: 75%;
     }
 }
