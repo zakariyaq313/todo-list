@@ -51,16 +51,20 @@ function addNewTask() {
         taskList.appendChild(newElement);
         newElement.classList.add("list-items");
 
-        let icon = document.createElement("i"),
+        let iconUnchecked = document.createElement("i"),
+            iconChecked = document.createElement("i"),
             paragraph = document.createElement("p"),
             deleteIcon = document.createElement("i");
 
-        newElement.appendChild(icon);
+        newElement.appendChild(iconUnchecked);
+        newElement.appendChild(iconChecked);
         newElement.appendChild(paragraph);
         newElement.appendChild(deleteIcon);
 
-        icon.classList.add("material-icons", "task-status");
-        icon.textContent = "panorama_fish_eye";
+        iconUnchecked.classList.add("material-icons", "task-status", "unchecked");
+        iconUnchecked.textContent = "panorama_fish_eye";
+        iconChecked.classList.add("material-icons", "task-status", "checked");
+        iconChecked.textContent = "check_circle";
 
         paragraph.textContent = userInput.value;
 
@@ -70,15 +74,15 @@ function addNewTask() {
         // Once the task is created, the input should become empty again
         userInput.value = "";
 
-        // Now when the task gets completed, we can make it visually be seen with relevant styles
+        // Now when the task gets completed, we can make it visually recognisable with relevant styles
         newElement.addEventListener("click", () => {
 
             paragraph.classList.toggle("task-complete");
 
             if (paragraph.classList.contains("task-complete")) {
-                icon.textContent = "check_circle";
+                iconChecked.style.transform = "scale(.9)";
             } else {
-                icon.textContent = "panorama_fish_eye";
+                iconChecked.style.transform = "scale(0)";
             }
         });
 

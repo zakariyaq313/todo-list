@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -8,7 +9,6 @@ html {
 }
 
 body {
-    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     position: relative;
 }
@@ -46,15 +46,12 @@ main {
     height: 50rem;
     width: 32rem;
     background-color: #f9f9f9;
-    /* background-color: #dbdabe; */
     border-radius: 1rem;
     box-shadow: 0 2px 1rem rgba(0, 0, 0, .6);
     text-align: left;
     color: rgba(0, 0, 0, .8);
-    /* color: #686d76; */
     font-size: 1.6rem;
     position: relative;
-    transition: all 1s ease-out;
 }
 
 .heading {
@@ -67,7 +64,6 @@ main {
 }
 
 .empty-list {
-    /* display: none; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -104,7 +100,6 @@ main {
 
 .items-list::-webkit-scrollbar {
     width: 0;
-    /* background-color: grey; */
 }
 
 .list-items {
@@ -115,6 +110,7 @@ main {
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    align-items: center;
 }
 
 .list-items:last-child {
@@ -127,13 +123,20 @@ main {
 
 .task-status {
     margin-right: 1rem;
-    transform: translateY(-1px);
     color: #8e2de2;
-    cursor: pointer;
+}
+
+.unchecked{
+    position: relative;
+}
+
+.checked{
+    position: absolute;
+    transform: scale(0);
+    transition: transform .2s;
 }
 
 .delete {
-    align-self: center;
     color: rgba(0, 0, 0, .2);
     transition: all .5s;
 }
@@ -161,11 +164,7 @@ li p {
     line-height: 2;
     font-size: 1.6rem;
     border-bottom: 1px solid rgba(0, 0, 0, .4);
-    transition: all .2s;
-}
-
-.add-item:required {
-    box-shadow: none;
+    transition: all .5s;
 }
 
 .add-item:hover {
@@ -186,7 +185,7 @@ li p {
     margin-left: 1rem;
     cursor: pointer;
     position: relative;
-    z-index: 1;
+    z-index: 10;
     transition: all .5s;
 }
 
@@ -194,19 +193,20 @@ li p {
     content: "";
     position: absolute;
     display: inline-block;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: 1rem;
     border-radius: 100%;
     background-color: #8e2de2;
-    z-index: -1;
-    top: 0;
-    left: 0;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     transition: all .5s;
 }
 
 .add-item-icon:hover::after {
-    transform: scale(1.8);
+    transform: translate(-50%, -50%) scale(2);
     opacity: 0;
 }
 
@@ -234,26 +234,32 @@ span a:hover {
     color: gray;
 }
 
-@media (max-width: 75em) {
+@media (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 1200px) {
     html {
         font-size: 56.25%;
     }
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 900px) {
     html {
         font-size: 50%;
     }
 }
 
-@media (max-width: 21.875em) {
+@media (max-width: 600px) {
     html {
-        font-size: 35%;
+        font-size: 45%;
     }
 }
 
-@media (min-width: 112.5em) {
+@media (max-width: 400px) {
     html {
-        font-size: 75%;
+        font-size: 42%;
     }
 }
