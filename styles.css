@@ -95,6 +95,9 @@ main {
     overflow-y: scroll;
     border-radius: 1rem;
     scrollbar-width: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .items-list::-webkit-scrollbar {
@@ -110,6 +113,7 @@ main {
     flex-direction: row;
     cursor: pointer;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .list-items:last-child {
@@ -125,11 +129,11 @@ main {
     color: #8e2de2;
 }
 
-.unchecked{
+.unchecked {
     position: relative;
 }
 
-.checked{
+.checked {
     position: absolute;
     transform: scale(0);
     transition: transform .2s;
@@ -254,11 +258,11 @@ span a:hover {
 }
 
 @media (max-width: 400px) {
-    .date{
+    .date {
         left: 2rem;
     }
 
-    .day{
+    .day {
         font-size: 3.6rem;
     }
 }
