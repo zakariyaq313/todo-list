@@ -26,7 +26,6 @@ main {
     position: absolute;
     top: 3rem;
     left: 4rem;
-    color: white;
 }
 
 .date-heading {
@@ -152,7 +151,8 @@ li p {
 .new-item {
     position: absolute;
     bottom: 2rem;
-    left: 3rem;
+    width: 90%;
+    margin: 0 10%;
 }
 
 .add-item {
@@ -161,6 +161,7 @@ li p {
     color: inherit;
     background: inherit;
     height: 4rem;
+    width: 70%;
     line-height: 2;
     font-size: 1.6rem;
     border-bottom: 1px solid rgba(0, 0, 0, .4);
@@ -252,14 +253,12 @@ span a:hover {
     }
 }
 
-@media (max-width: 600px) {
-    html {
-        font-size: 45%;
-    }
-}
-
 @media (max-width: 400px) {
-    html {
-        font-size: 42%;
+    .date{
+        left: 2rem;
+    }
+
+    .day{
+        font-size: 3.6rem;
     }
 }
