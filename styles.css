@@ -14,8 +14,6 @@ body {
 }
 
 main {
-    width: 100vw;
-    height: 100vh;
     background-image: linear-gradient(to right, #8e2de2 0%, #4a00e0 50%, #FFFFFF 50%, #FFFFFF 100%);
     display: grid;
     align-content: center;
@@ -34,10 +32,12 @@ main {
 }
 
 .day {
-    font-size: 4rem;
+    font-size: 4.3rem;
+    font-weight: 600;
 }
 
 .month {
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
@@ -51,11 +51,12 @@ main {
     color: rgba(0, 0, 0, .8);
     font-size: 1.6rem;
     position: relative;
+    margin: 10rem;
 }
 
 .heading {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.2rem;
+    font-weight: 500;
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
     -webkit-background-clip: text;
     background-clip: text;
@@ -122,6 +123,7 @@ main {
 
 .task-complete {
     text-decoration: line-through;
+    color: gray;
 }
 
 .task-status {
@@ -239,7 +241,7 @@ span a:hover {
     color: gray;
 }
 
-@media (min-width: 112.5em) {
+@media (min-width: 1600px) {
     html {
         font-size: 75%;
     }
@@ -255,11 +257,16 @@ span a:hover {
     html {
         font-size: 50%;
     }
+
+    .card{
+        margin: 20rem 0;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .date {
-        left: 2rem;
+        left: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .day {
