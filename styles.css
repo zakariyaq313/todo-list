@@ -11,13 +11,14 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
 }
 
 main {
-    background-image: linear-gradient(to right, #8e2de2 0%, #4a00e0 50%, #FFFFFF 50%, #FFFFFF 100%);
-    display: grid;
-    align-content: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to right, #8e2de2 0%, #4a00e0 50%, #FFFFFF 50%, #FFFFFF 100%);
 }
 
 .date {
@@ -114,7 +115,7 @@ main {
     flex-direction: row;
     cursor: pointer;
     align-items: center;
-    -webkit-tap-highlight-color: transparent;
+    position: relative;
 }
 
 .list-items:last-child {
@@ -129,10 +130,6 @@ main {
 .task-status {
     margin-right: 1rem;
     color: #8e2de2;
-}
-
-.unchecked {
-    position: relative;
 }
 
 .checked {
@@ -170,14 +167,11 @@ li p {
     width: 70%;
     line-height: 2;
     font-size: 1.6rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .4);
-    transition: all .5s;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+    transition: all 0.5s;
 }
 
-.add-item:hover {
-    border-bottom: 2px solid #8e2de2;
-}
-
+.add-item:hover,
 .add-item:focus {
     border-bottom: 2px solid #8e2de2;
 }
